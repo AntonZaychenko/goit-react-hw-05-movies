@@ -14,7 +14,7 @@ export const App = () => {
 
   const hundleSubmit = query => {
     setQuery(query);
-   
+  
   };
 
   return (
@@ -29,7 +29,7 @@ export const App = () => {
       </nav>
       <Routes>
         <Route path='/' element={<Home/>}/>
-          <Route path="/About" element={<About onSubmit={hundleSubmit}/>}/>
+          <Route path="/About" element={<About onSubmit={hundleSubmit} test={query}/>}/>
             <Route path="/movies/:movieId" element={<MovieDetails />}>
 
                 <Route path="cast" element={<Cast/>}/>
